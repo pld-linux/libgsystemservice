@@ -12,6 +12,7 @@ BuildRequires:	glib2-devel >= 1:2.54
 BuildRequires:	gtk-doc
 BuildRequires:	meson >= 0.45.0
 BuildRequires:	ninja >= 1.5
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	systemd-devel >= 1:209
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
