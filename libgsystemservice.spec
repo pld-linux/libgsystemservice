@@ -1,21 +1,24 @@
 Summary:	Common components for building D-Bus system services
 Summary(pl.UTF-8):	Wspólne komponenty do tworzenia usług systemowych D-Bus
 Name:		libgsystemservice
-Version:	0.1.0
+Version:	0.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgsystemservice/0.1/%{name}-%{version}.tar.xz
-# Source0-md5:	eda4dbd96a3107d885e59750527d746b
+Source0:	https://download.gnome.org/sources/libgsystemservice/0.2/%{name}-%{version}.tar.xz
+# Source0-md5:	e4ba190bf0ae40cf9b487a75abfc2b4c
 URL:		https://gitlab.gnome.org/pwithnall/libgsystemservice
-BuildRequires:	glib2-devel >= 1:2.54
+BuildRequires:	glib2-devel >= 1:2.71
 BuildRequires:	gtk-doc
-BuildRequires:	meson >= 0.45.0
+BuildRequires:	meson >= 0.54.0
 BuildRequires:	ninja >= 1.5
+BuildRequires:	polkit-devel >= 0.114
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	systemd-devel >= 1:209
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	glib2 >= 1:2.71
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +36,7 @@ Summary:	Header files for libgsystemservice library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libgsystemservice
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.54
+Requires:	glib2-devel >= 1:2.71
 Requires:	systemd-devel >= 1:209
 
 %description devel
